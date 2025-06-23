@@ -1,147 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Corporate Portfolio | Ritik Ranjan</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+  <title>Ritik Ranjan | Analytics Portfolio</title>
+  <style>
+    :root {
+      --primary: #007acc;
+      --dark-bg: #222;
+      --light-bg: #f4f4f4;
+      --text-dark: #333;
+      --text-light: #fff;
+      --accent-bg: #e0f7fa;
+    }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background:linear-gradient(to right, #1E3A8A, #2563EB);
+      color: var(--text-light);
+      padding: 40px 150px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: var(--text-light);
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background: linear-gradient(to right, #fff, var(--accent-bg));
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero img {
+      width: 400px;
+      border-radius: 10px;
+      margin-right: 30px;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-text h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+
+    .about-text p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .experience-section, .skills-box, .cards {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+    }
+
+    .experience-entry {
+      display: flex;
+      margin-bottom: 30px;
+      gap: 20px;
+    }
+
+    .experience-entry img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .experience-details h3 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .experience-details p {
+      font-size: 14px;
+      color: #777;
+    }
+
+    .experience-details ul {
+      padding-left: 18px;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .skills-box p {
+      font-size: 16px;
+    }
+
+    .skills-box strong {
+      background: #fff3cd;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .skill-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 25px;
+      justify-content: center;
+    }
+
+    .skill-icons img {
+      width: 60px;
+      height: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-icons img:hover {
+      transform: scale(1.2);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fafafa;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .card-desc {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .github-link {
+      font-size: 14px;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .github-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: var(--dark-bg);
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero img {
+        margin: 0 0 20px 0;
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .experience-entry {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .experience-entry img {
+        margin-bottom: 10px;
+
+      }
+    }
+	college-experience-section {
+	  background: #fff;
+	  padding: 40px;
+	  border-radius: 12px;
+	  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+	}
+
+	.college-experience-grid {
+	  display: flex;
+	  gap: 30px;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+
+	.college-box {
+	  flex: 1 1 300px;
+	  max-width: 560px;
+	  background: var(--light-bg);
+	  border-radius: 12px;
+	  overflow: hidden;
+	  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	  text-align: center;
+	}
+
+	.college-box img {
+	  width: 100%;
+	  height: 336px;
+	  object-fit: cover;
+	}
+
+	.college-desc {
+	  padding: 20px;
+	}
+
+	.college-desc h3 {
+	  color: var(--primary);
+	  margin-bottom: 10px;
+	}
+
+	.college-desc p {
+	  font-size: 14px;
+	  color: #555;
+	}
+
+  </style>
+</head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-container">
-      <h1 class="logo">Ritik Ranjan</h1>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+
+  <header>
+    <h1>Ritik Ranjan</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-container">
-      <div class="hero-text">
-        <h2>Ritik Ranjan</h2>
-        <p class="designation">Aspiring Business Analyst & Data Scientist</p>
-        <p class="tagline">Transforming data into actionable insights for business impact.</p>
-        <div class="action-links">
-          <a href="https://linkedin.com/in/">LinkedIn</a>
-          <a href="mailto:ritikranjan069@gmail.com">Email</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="your-image.jpg" alt="Ritik Ranjan" />
-      </div>
+  <section class="section hero" id="about">
+    <img src="C:\Users\ritik\Downloads\WhatsApp Image 2025-06-20 at 13.57.58.jpeg" alt="Ritik Ranjan" />
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I am Ritik Ranjan, a passionate analytics professional pursuing my M.S. in Analytics at TISS, Mumbai. With a background in Electronics and hands-on experience in analytics, BI, and ML, I bridge technical precision and business insights to solve real-world problems.</p>
+      <p>I have contributed to data-driven strategies in pharma, ed-tech, maritime HR, and finance — building ML recommenders, A/B testing campaigns, and Power BI dashboards using Python, SQL, and Excel.</p>
+      <p>At Invengene, I streamlined variance reports; at Hurrey Tech, built custom user metrics; at GoodRich, automated HR analytics. My toolset includes Python, R, Power BI, Tableau, SQL, and cloud tools like BigQuery and AWS.</p>
+      <p>Certified by IIT Kharagpur and DataCamp, I’m constantly evolving through project-based learning.</p>
     </div>
   </section>
+  <!-- College Experience Section -->
+  <section class="section college-experience-section" id="college">
+  <h2>🎓 College Experience</h2>
+  <div class="college-experience-grid">
+	
+	<!-- Box 1 -->
+	<div class="college-box">
+	  <img src="https://eduadvice.in/media/uploads/blog/TISS.jpg" alt="TISS College" />
+	  <div class="college-desc">
+		<h3>TISS Mumbai</h3>
+		<p>Pursuing M.S. in Analytics — exploring real-world data applications, machine learning, and domain-based case projects with industry leaders.</p>
+	  </div>
+	</div>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p class="bio">A data-driven professional currently pursuing M.S in Analytics at TISS Mumbai. I bring hands-on experience in business analysis, data science, and HR analytics through impactful internships and real-world projects.</p>
-      <ul class="skills-list">
-        <li>Business & Data Analytics</li>
-        <li>Machine Learning & Python</li>
-        <li>Power BI, SQL, Excel Automation</li>
-      </ul>
-    </div>
+	<!-- Box 2 -->
+	<div class="college-box">
+	  <img src="https://dubeat.com/wp-content/uploads/2019/09/1502335801phppjoMtH_g.jpg" alt="Undergrad College" />
+	  <div class="college-desc">
+		<h3>Undergrad - Electronics</h3>
+		<p>Completed B.Sc(Hons.) in Electronics; developed logical thinking, foundation in systems, and participated in national-level tech competitions.</p>
+	  </div>
+	</div>
+
+  </div>
   </section>
 
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2 class="section-title">Experience & Journey</h2>
-      <ul class="experience-list">
-        <li>🎓 M.S in Analytics, TISS Mumbai — 2023-2025 (8.0 CGPA)</li>
-        <li>🎓 B.Sc. (Hons.) Electronics, University of Delhi — 2019-2022 (8.5 CGPA)</li>
-        <li>💼 Business Analyst Intern, Invengene Pharma — Dec 2024 – Mar 2025</li>
-        <li>💼 Data Scientist Intern, Hurrey Tech — Apr 2024 – Jun 2024</li>
-        <li>💼 HR Analyst Intern, Good Rich Maritime — Oct 2023 – Dec 2023</li>
-        <li>🌍 Certifications: ML (IIT KGP), 100 Days of Code, SQL (DataCamp), Portfolio Mgmt (Python)</li>
-      </ul>
-    </div>
-  </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section-title">Projects / Case Studies</h2>
-      <div class="projects">
-        <div class="project-card">
-          <h3>Digital Media Business Insights (SQL)</h3>
-          <p>Analyzed top music genres and sales agent performance across 600+ customers.</p>
-        </div>
-        <div class="project-card">
-          <h3>Sales Dashboard (Excel)</h3>
-          <p>Built performance dashboards across Sales and Operations to automate reporting.</p>
-        </div>
-        <div class="project-card">
-          <h3>Financial Fraud Detection</h3>
-          <p>Used SQL & Python ML models (LogReg, RF) to flag fraudulent transactions with 92% precision.</p>
-        </div>
-        <div class="project-card">
-          <h3>Marketing A/B Testing</h3>
-          <p>Compared 20K+ ad impressions; discovered 18% higher conversion on weekdays via digital ads.</p>
-        </div>
-        <div class="project-card">
-          <h3>Customer Churn Prediction</h3>
-          <p>Built ML models (XGBoost, AdaBoost) with 83% accuracy to predict churn & identify key drivers.</p>
-        </div>
+  <section class="section experience-section" id="experience">
+    <h2>🚀 My Experience</h2>
+
+    <div class="experience-entry">
+      <img src="https://www.brandinginasia.com/wp-content/uploads/2024/10/Invengene-Logo.png" alt="Invengene Logo">
+      <div class="experience-details">
+        <h3>💼 Business Analyst – Invengene Pharmaceutical Ltd.</h3>
+        <p>Mumbai | Dec 2024 – Mar 2025</p>
+        <ul>
+          <li>Portfolio analysis using KPIs & Excel</li>
+          <li>Automated Budget vs Actuals reports</li>
+          <li>Business case dashboard in Power BI</li>
+          <li>KRAs-based scorecards & reporting</li>
+          <li>Python script for data consolidation</li>
+        </ul>
       </div>
     </div>
-  </section>
 
-  <!-- Skills & Tools Section -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section-title">Skills & Tools</h2>
-      <div class="skills">
-        <span class="skill-badge">Python</span>
-        <span class="skill-badge">R</span>
-        <span class="skill-badge">MySQL, PostgreSQL</span>
-        <span class="skill-badge">Power BI</span>
-        <span class="skill-badge">Tableau</span>
-        <span class="skill-badge">Advanced Excel</span>
-        <span class="skill-badge">EDA</span>
-        <span class="skill-badge">ML Algorithms</span>
-        <span class="skill-badge">NLP</span>
-        <span class="skill-badge">Time Series</span>
-        <span class="skill-badge">Google BigQuery</span>
-        <span class="skill-badge">Azure ML Basics</span>
+    <div class="experience-entry">
+      <img src="https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS355385.jpg" alt="Hurrey Tech Logo">
+      <div class="experience-details">
+        <h3>🧠 Data Scientist – Hurrey Tech Ventures</h3>
+        <p>Bengaluru | Apr 2024 – Jun 2024</p>
+        <ul>
+          <li>Validation algorithms for math solutions</li>
+          <li>Collaborative filtering ML recommender</li>
+          <li>Defined user metrics & indexes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="experience-entry">
+      <img src="https://goodrich.co/wp-content/uploads/2024/03/goodrich-wp-logo-01.png" alt="GoodRich Logo">
+      <div class="experience-details">
+        <h3>📊 HR Analyst – GoodRich Maritime Pvt. Ltd.</h3>
+        <p>Mumbai | Oct 2023 – Dec 2023</p>
+        <ul>
+          <li>Automated HR dashboard for 1,342 employees</li>
+          <li>Used SQL, Python, Excel for live reports</li>
+          <li>Resolved 1.3x compensation gap</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <div class="contact-links">
-        <a href="mailto:ritikranjan069@gmail.com">Email</a>
-        <a href="#">LinkedIn</a>
+  <section class="section skills-box" id="skills">
+    <h2>💡 My Skill Toolkit</h2>
+    <p>
+      <strong>Programming:</strong> <b>Python, R, MySQL, PostgreSQL</b><br>
+      <strong>Reporting:</strong> <b>Power BI, Tableau, Excel (VLOOKUP, Pivots, Macros)</b><br>
+      <strong>ML:</strong> <b>Regression, Trees, KNN, Random Forest, Time Series, Clustering</b><br>
+      <strong>Analytics:</strong><b> EDA, A/B Testing, Financial Modelling, NLP</b><br>
+      <strong>Cloud:</strong> <b>Google BigQuery, AWS S3, Azure ML (basic)</b>
+    </p>
+    <div class="skill-icons">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png" alt="Python">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1200px-R_logo.svg.png" alt="R">
+      <img src="https://www.fullstackpython.com/img/logos/mysql.png" alt="MySQL">
+      <img src="https://aios.horisontgruppen.dk/images/w3072/dd221adb-b6e3-46dd-8111-9bdfbb196676.jpg" alt="Power BI">
+      <img src="https://events.evalcommunity.com/calendar/wp-content/uploads/2024/04/Tableau-Emblem.png" alt="Tableau">
+      <img src="https://it.liu.edu/wp-content/uploads/2016/09/Excel.jpg" alt="Excel">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/800px-Amazon_Web_Services_Logo.svg.png" alt="AWS">
+      <img src="https://www.selectdistinct.co.uk/wp-content/uploads/2023/03/Google-Big-Query-jpg.webp" alt="BigQuery">
+    </div>
+  </section>
+
+  <section class="section cards" id="projects">
+    <h2>📁 Projects Showcase</h2>
+    <div class="card-grid">
+      <!-- repeat these cards -->
+      <div class="card">
+        <img src="images/project1.jpg" alt="SQL Insights Project" />
+        <div class="card-body">
+          <div class="card-title">SQL-Based Business Insights</div>
+          <p class="card-desc">Analyzed music genres and sales agent performance across 600+ customers.</p>
+          <a class="github-link" href="https://github.com/yourusername/sql-digital-media-insights" target="_blank">🔗 View on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/project2.jpg" alt="Sales Dashboard" />
+        <div class="card-body">
+          <div class="card-title">Sales Reporting & Dashboard</div>
+          <p class="card-desc">Built Excel dashboards for Sales & Ops; reduced manual effort and enabled fast decisions.</p>
+          <a class="github-link" href="https://github.com/yourusername/sales-report-dashboard" target="_blank">🔗 View on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/project3.jpg" alt="Fraud Detection" />
+        <div class="card-body">
+          <div class="card-title">Financial Fraud Detection</div>
+          <p class="card-desc">Detected fraud in 100k+ credit card transactions using SQL + ML (92% precision).</p>
+          <a class="github-link" href="https://github.com/yourusername/credit-fraud-detection" target="_blank">🔗 View on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/project4.jpg" alt="AB Testing" />
+        <div class="card-body">
+          <div class="card-title">A/B Testing for Marketing</div>
+          <p class="card-desc">Weekday ads outperformed PSAs by 18%, boosting ROI by 12%.</p>
+          <a class="github-link" href="https://github.com/yourusername/ab-testing-campaign" target="_blank">🔗 View on GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/project5.jpg" alt="Churn Prediction" />
+        <div class="card-body">
+          <div class="card-title">Customer Churn Prediction</div>
+          <p class="card-desc">Used AdaBoost & XGBoost with 83% accuracy; identified key churn drivers.</p>
+          <a class="github-link" href="https://github.com/yourusername/customer-churn-model" target="_blank">🔗 View on GitHub</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Ritik Ranjan</p>
-      <p><a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Sitemap</a></p>
-    </div>
+  <footer>
+    &copy; 2025 Ritik Ranjan | Made with ❤️ & Data
   </footer>
-</body>
 
+</body>
 </html>
