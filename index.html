@@ -1,79 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ritik Ranjan | Portfolio</title>
-  <link rel="stylesheet" href="main.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corporate Portfolio | Ritik Ranjan</title>
+  <link rel="stylesheet" href="main.css" />
 </head>
+
 <body>
-  <header>
-    <h1>Ritik Ranjan</h1>
-    <p>Email: <a href="mailto:ritikranjan069@gmail.com">ritikranjan069@gmail.com</a> | Contact: 9006722615</p>
-    <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <h1 class="logo">Ritik Ranjan</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>M.S in Analytics, TISS Mumbai (2023–2025) – CGPA: 8.0</li>
-      <li>B.Sc. (Hons.) in Electronics, University of Delhi (2019–2022) – CGPA: 8.5</li>
-      <li>Class 12th, Doon Global School – 87.4%</li>
-      <li>Class 10th, MS Memorial Public School – 10 CGPA</li>
-    </ul>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h2>Ritik Ranjan</h2>
+        <p class="designation">Aspiring Business Analyst & Data Scientist</p>
+        <p class="tagline">Transforming data into actionable insights for business impact.</p>
+        <div class="action-links">
+          <a href="https://linkedin.com/in/">LinkedIn</a>
+          <a href="mailto:ritikranjan069@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="your-image.jpg" alt="Ritik Ranjan" />
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Internships</h2>
-    <h3>Business Analyst – Invengene Pharma (Dec 2024 – Mar 2025)</h3>
-    <ul>
-      <li>Built dashboards & automated reports in Excel & Power BI</li>
-      <li>Automated data extraction with Python scripts</li>
-    </ul>
-
-    <h3>Data Scientist – Hurrey Tech (Apr 2024 – Jun 2024)</h3>
-    <ul>
-      <li>Developed ML recommendation systems using collaborative filtering</li>
-      <li>Created user behavior metrics</li>
-    </ul>
-
-    <h3>HR Analyst – Good Rich Maritime (Oct 2023 – Dec 2023)</h3>
-    <ul>
-      <li>Built HR dashboards with SQL, Python & Power BI</li>
-      <li>Resolved salary discrepancies, optimized compensation strategy</li>
-    </ul>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="bio">A data-driven professional currently pursuing M.S in Analytics at TISS Mumbai. I bring hands-on experience in business analysis, data science, and HR analytics through impactful internships and real-world projects.</p>
+      <ul class="skills-list">
+        <li>Business & Data Analytics</li>
+        <li>Machine Learning & Python</li>
+        <li>Power BI, SQL, Excel Automation</li>
+      </ul>
+    </div>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>SQL Analysis for Digital Media Performance</li>
-      <li>Excel Dashboard for Sales & Operations</li>
-      <li>Fraud Detection using Logistic Regression & Random Forest</li>
-      <li>A/B Testing on Digital Ads (12% ROI gain)</li>
-      <li>Churn Prediction using Ensemble Models (83% accuracy)</li>
-    </ul>
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">Experience & Journey</h2>
+      <ul class="experience-list">
+        <li>🎓 M.S in Analytics, TISS Mumbai — 2023-2025 (8.0 CGPA)</li>
+        <li>🎓 B.Sc. (Hons.) Electronics, University of Delhi — 2019-2022 (8.5 CGPA)</li>
+        <li>💼 Business Analyst Intern, Invengene Pharma — Dec 2024 – Mar 2025</li>
+        <li>💼 Data Scientist Intern, Hurrey Tech — Apr 2024 – Jun 2024</li>
+        <li>💼 HR Analyst Intern, Good Rich Maritime — Oct 2023 – Dec 2023</li>
+        <li>🌍 Certifications: ML (IIT KGP), 100 Days of Code, SQL (DataCamp), Portfolio Mgmt (Python)</li>
+      </ul>
+    </div>
   </section>
 
-  <section>
-    <h2>Skills</h2>
-    <p><strong>Languages:</strong> Python, R, SQL, PostgreSQL</p>
-    <p><strong>Tools:</strong> Power BI, Tableau, Excel, Google BigQuery, AWS S3, Azure ML</p>
-    <p><strong>ML Techniques:</strong> Regression, Clustering, Classification, NLP</p>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects / Case Studies</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Digital Media Business Insights (SQL)</h3>
+          <p>Analyzed top music genres and sales agent performance across 600+ customers.</p>
+        </div>
+        <div class="project-card">
+          <h3>Sales Dashboard (Excel)</h3>
+          <p>Built performance dashboards across Sales and Operations to automate reporting.</p>
+        </div>
+        <div class="project-card">
+          <h3>Financial Fraud Detection</h3>
+          <p>Used SQL & Python ML models (LogReg, RF) to flag fraudulent transactions with 92% precision.</p>
+        </div>
+        <div class="project-card">
+          <h3>Marketing A/B Testing</h3>
+          <p>Compared 20K+ ad impressions; discovered 18% higher conversion on weekdays via digital ads.</p>
+        </div>
+        <div class="project-card">
+          <h3>Customer Churn Prediction</h3>
+          <p>Built ML models (XGBoost, AdaBoost) with 83% accuracy to predict churn & identify key drivers.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>Introduction to Machine Learning – IIT KGP</li>
-      <li>100 Days of Code – Python</li>
-      <li>Data Analyst in SQL – DataCamp</li>
-      <li>Portfolio Management in Python</li>
-    </ul>
+  <!-- Skills & Tools Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills & Tools</h2>
+      <div class="skills">
+        <span class="skill-badge">Python</span>
+        <span class="skill-badge">R</span>
+        <span class="skill-badge">MySQL, PostgreSQL</span>
+        <span class="skill-badge">Power BI</span>
+        <span class="skill-badge">Tableau</span>
+        <span class="skill-badge">Advanced Excel</span>
+        <span class="skill-badge">EDA</span>
+        <span class="skill-badge">ML Algorithms</span>
+        <span class="skill-badge">NLP</span>
+        <span class="skill-badge">Time Series</span>
+        <span class="skill-badge">Google BigQuery</span>
+        <span class="skill-badge">Azure ML Basics</span>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Ritik Ranjan</p>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-links">
+        <a href="mailto:ritikranjan069@gmail.com">Email</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Ritik Ranjan</p>
+      <p><a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Sitemap</a></p>
+    </div>
   </footer>
 </body>
+
 </html>
